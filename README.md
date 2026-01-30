@@ -1,6 +1,7 @@
-# k8s-setup-for-ubuntu
-These repo already include all steps for Ubuntu 24.04 / noble, repo issue, containerd, kubeadm visibility
-Kubernetes Cluster Setup on AWS (kubeadm)
+## k8s-setup-for-ubuntu
+## These repo already include all steps for Ubuntu 24.04 / noble, repo issue, containerd, kubeadm visibility
+
+# Kubernetes Cluster Setup on AWS (kubeadm)
 1. AWS EC2 Prerequisites
 2. Create 3 EC2 instances:
 3. Open the following ports in the same security group:
@@ -35,7 +36,7 @@ sudo reboot
 
 <img width="800" height="96" alt="image" src="https://github.com/user-attachments/assets/4e7e3a9b-bd59-404d-a5ed-20298e1e6346" />
 
-2.2 Disable Swap (Required)
+2.2 Disable Swap
 ```
 sudo swapoff -a
 sudo sed -i '/ swap / s/^/#/' /etc/fstab
@@ -121,6 +122,7 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] \
 https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' |
 sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
+
 Install:
 ```
 sudo apt update
@@ -128,12 +130,12 @@ sudo apt install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 ---
-
-** When you run these commands in either master or worker node, you will encounter an error **
+***
+**When you run these commands in either master or worker node, you will encounter an error**
 
 <img width="1077" height="511" alt="Screenshot (568)" src="https://github.com/user-attachments/assets/3f14a157-2532-4bbd-843c-ec833e428684" />
 
-✅ DEFINITIVE FIX (Do this now)
+✅ FIX 
 
 🔹 Step 1: REMOVE the broken file (mandatory)
 ```
@@ -164,7 +166,6 @@ ls -l /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 ```
 
 🔹 Step 4: Re-create repo file using tee only
-⚠️ Do NOT edit manually, do NOT use nano
 ```
 echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /" | \
 sudo tee /etc/apt/sources.list.d/kubernetes.list
@@ -179,7 +180,7 @@ cat /etc/apt/sources.list.d/kubernetes.list
 deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /
 ```
 
-🔹 Step 6: Update APT (this should now work)
+🔹 Step 6: Update APT (now it will work)
 ```
 sudo apt clean
 sudo apt update
@@ -197,8 +198,9 @@ kubeadm version
 kubectl version --client
 ```
 ---
+***
 
-5. Initialize Kubernetes Master (MASTER NODE ONLY)
+### 5. Initialize Kubernetes Master (MASTER NODE ONLY)
 ```
 sudo kubeadm init \
 --pod-network-cidr=192.168.0.0/16
@@ -222,7 +224,7 @@ Verify:
 kubectl get nodes
 ```
 
-6. Install Calico CNI (MASTER)
+### 6. Install Calico CNI (MASTER)
 ```
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/calico.yaml
 ```
@@ -250,8 +252,11 @@ sudo kubeadm join <MASTER_PRIVATE_IP>:6443 \
 ```
 kubectl get nodes -o wide
 ```
+___
+***
 
-✅ KUBERNETES WORKER NODE SETUP (ERROR-PROOF)
+
+### ✅ KUBERNETES WORKER NODE SETUP( without error ) 
 
 🔹 STEP 1: Set Hostname (already set in our case)
 ```
@@ -401,14 +406,19 @@ Our Master node is initialized
 🔹 STEP 9: Join Worker to Cluster
 
 Run ONLY when master is ready
-
+```
 sudo kubeadm join <MASTER_PRIVATE_IP>:6443 \
 --token <TOKEN> \
 --discovery-token-ca-cert-hash sha256:<HASH>
+```
 
 <img width="1354" height="99" alt="Screenshot (590)" src="https://github.com/user-attachments/assets/72ac2e1e-5b7c-4276-a1e5-e35c2bd58d39" />
 
-🔹 STEP 10: Verify (ON MASTER)
+
+___
+***
+
+## Verify (ON MASTER)
 ```
 kubectl get nodes
 ```
