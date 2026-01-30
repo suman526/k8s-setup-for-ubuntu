@@ -8,3 +8,12 @@ These repo already include all steps for Ubuntu 24.04 / noble, repo issue, conta
 <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/a373b190-bd3f-44c5-b1d1-ea2d44fd9a8b" />
 <img width="522" height="100" alt="Screenshot (548)" src="https://github.com/user-attachments/assets/34242bc1-b64d-4bab-9698-8f8d4e8334ff" />
 <img width="920" height="519" alt="Screenshot (550)" src="https://github.com/user-attachments/assets/5db93073-710d-48f7-b75d-633c8dcbc7eb" />
+<img width="482" height="60" alt="Screenshot (551)" src="https://github.com/user-attachments/assets/86b22936-2edb-4319-a942-77149e516a75" />
+<img width="1350" height="211" alt="Screenshot (552)" src="https://github.com/user-attachments/assets/0869e269-271c-49d4-84d3-3df38b081b03" />
+<img width="1366" height="141" alt="Screenshot (553)" src="https://github.com/user-attachments/assets/b1837a94-41e6-47c0-8856-3f90b2b4fa57" />
+<img width="1349" height="97" alt="Screenshot (554)" src="https://github.com/user-attachments/assets/14789d22-dbcd-4e54-aa3d-4459c0a782f1" />
+<img width="701" height="72" alt="Screenshot (555)" src="https://github.com/user-attachments/assets/4a3e6b8f-375c-46f7-87e2-3683ecd16de4" />
+<img width="701" height="72" alt="Screenshot (555)" src="https://github.com/user-attachments/assets/6e188077-73e6-4ef2-8abd-81a27b3104f4" />
+<img width="1021" height="276" alt="Screenshot (556)" src="https://github.com/user-attachments/assets/63b853a0-a678-4aed-9d68-19b7aa5fea0d" />
+
+
