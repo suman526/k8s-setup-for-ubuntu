@@ -6,7 +6,32 @@ Kubernetes Cluster Setup on AWS (kubeadm + Calico)
 3. Open the following ports in the same security group:
 <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/936e7e7e-e4c2-4b4f-a0c8-eb9b3b525d0d" />
 
+
 <img width="800" height="181" alt="image" src="https://github.com/user-attachments/assets/ae044f22-b0d0-4052-8b9a-6e0caa00869a" />
+
+
+2. Common Setup (Run on ALL 3 Nodes)
+2.1 Set Hostnames
+
+Master
+```
+sudo hostnamectl set-hostname k8s-master
+```
+
+Worker-1
+```
+sudo hostnamectl set-hostname k8s-worker1
+```
+
+Worker-2
+```
+sudo hostnamectl set-hostname k8s-worker2
+```
+
+Reboot:
+```
+sudo reboot
+```
 
 <img width="800" height="96" alt="image" src="https://github.com/user-attachments/assets/4e7e3a9b-bd59-404d-a5ed-20298e1e6346" />
 
