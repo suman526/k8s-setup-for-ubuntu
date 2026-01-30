@@ -12,7 +12,8 @@
 <img width="800" height="181" alt="image" src="https://github.com/user-attachments/assets/ae044f22-b0d0-4052-8b9a-6e0caa00869a" />
 
 
-2. Common Setup (Run on ALL 3 Nodes)
+
+### 2. Common Setup (Run on ALL 3 Nodes)
 
 2.1 Set Hostnames
 
