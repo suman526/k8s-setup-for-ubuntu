@@ -1,6 +1,9 @@
 # k8s-setup-for-ubuntu
 These repo already include all steps for Ubuntu 24.04 / noble, repo issue, containerd, kubeadm visibility
-
+Kubernetes Cluster Setup on AWS (kubeadm + Calico)
+1. AWS EC2 Prerequisites
+2. Create 3 EC2 instances:
+3. Open the following ports in the same security group:
 <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/936e7e7e-e4c2-4b4f-a0c8-eb9b3b525d0d" />
 
 <img width="800" height="181" alt="image" src="https://github.com/user-attachments/assets/ae044f22-b0d0-4052-8b9a-6e0caa00869a" />
