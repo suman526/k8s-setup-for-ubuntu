@@ -35,7 +35,35 @@ sudo reboot
 
 <img width="800" height="96" alt="image" src="https://github.com/user-attachments/assets/4e7e3a9b-bd59-404d-a5ed-20298e1e6346" />
 
+2.2 Disable Swap (Required)
+```
+sudo swapoff -a
+sudo sed -i '/ swap / s/^/#/' /etc/fstab
+```
+2.3 Load Kernel Modules
+```
+cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+overlay
+br_netfilter
+EOF
+
+sudo modprobe overlay
+sudo modprobe br_netfilter
+```
+
+2.4 Kernel Networking Settings
+```
+cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-iptables  = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+net.ipv4.ip_forward                 = 1
+EOF
+
+sudo sysctl --system
+```
+
 <img width="920" height="519" alt="Screenshot (550)" src="https://github.com/user-attachments/assets/e8173922-850e-410f-8060-08be6bd86811" />
+
 
 <img width="482" height="60" alt="Screenshot (551)" src="https://github.com/user-attachments/assets/70be86a2-0501-4b99-809c-9710ea739c70" />
 
