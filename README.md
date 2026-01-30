@@ -5,6 +5,7 @@
 1. AWS EC2 Prerequisites
 2. Create 3 EC2 instances:
 3. Open the following ports in the same security group:
+
 <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/936e7e7e-e4c2-4b4f-a0c8-eb9b3b525d0d" />
 
 
@@ -12,6 +13,7 @@
 
 
 2. Common Setup (Run on ALL 3 Nodes)
+
 2.1 Set Hostnames
 
 Master
@@ -104,8 +106,9 @@ sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] \
 https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' |
 sudo tee /etc/apt/sources.list.d/kubernetes.list
-<img width="1350" height="211" alt="Screenshot (552)" src="https://github.com/user-attachments/assets/0869e269-271c-49d4-84d3-3df38b081b03" />
 ```
+
+<img width="1350" height="211" alt="Screenshot (552)" src="https://github.com/user-attachments/assets/0869e269-271c-49d4-84d3-3df38b081b03" />
 
 4. Install Kubernetes Components (ALL NODES)
 ```
@@ -176,6 +179,7 @@ sudo tee /etc/apt/sources.list.d/kubernetes.list
 cat /etc/apt/sources.list.d/kubernetes.list
 ```
 ✅ Output must be exactly ONE LINE:
+
 ```
 deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /
 ```
