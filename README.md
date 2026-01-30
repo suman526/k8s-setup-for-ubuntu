@@ -6,3 +6,5 @@ These repo already include all steps for Ubuntu 24.04 / noble, repo issue, conta
 <img width="920" height="519" alt="Screenshot (550)" src="https://github.com/user-attachments/assets/e8173922-850e-410f-8060-08be6bd86811" />
 <img width="482" height="60" alt="Screenshot (551)" src="https://github.com/user-attachments/assets/70be86a2-0501-4b99-809c-9710ea739c70" />
 <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/a373b190-bd3f-44c5-b1d1-ea2d44fd9a8b" />
+<img width="522" height="100" alt="Screenshot (548)" src="https://github.com/user-attachments/assets/34242bc1-b64d-4bab-9698-8f8d4e8334ff" />
+<img width="920" height="519" alt="Screenshot (550)" src="https://github.com/user-attachments/assets/5db93073-710d-48f7-b75d-633c8dcbc7eb" />
