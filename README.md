@@ -64,6 +64,28 @@ sudo sysctl --system
 
 <img width="920" height="519" alt="Screenshot (550)" src="https://github.com/user-attachments/assets/e8173922-850e-410f-8060-08be6bd86811" />
 
+3. Install Container Runtime (containerd)
+```
+sudo apt update
+sudo apt install -y containerd
+```
+
+Configure containerd
+```
+sudo mkdir -p /etc/containerd
+containerd config default | sudo tee /etc/containerd/config.toml
+
+
+Enable SystemdCgroup
+
+sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/' \
+/etc/containerd/config.toml
+```
+Restart:
+```
+sudo systemctl restart containerd
+sudo systemctl enable containerd
+```
 
 <img width="482" height="60" alt="Screenshot (551)" src="https://github.com/user-attachments/assets/70be86a2-0501-4b99-809c-9710ea739c70" />
 
