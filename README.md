@@ -1,5 +1,5 @@
 ## k8s-setup-for-ubuntu
-## These repo already include all steps for Ubuntu 24.04 / noble, repo issue, containerd, kubeadm visibility
+## This repository include all steps for Ubuntu 24.04 / noble, repo issue, containerd, kubeadm visibility
 
 # Kubernetes Cluster Setup on AWS (kubeadm)
 1. AWS EC2 Prerequisites
@@ -210,7 +210,7 @@ kubectl version --client
 sudo kubeadm init \
 --pod-network-cidr=192.168.0.0/16
 ```
-IMPORTANT: Save the kubeadm join command shown in output.
+#### IMPORTANT: Save the kubeadm join command shown in output.
 
 <img width="1349" height="97" alt="Screenshot (554)" src="https://github.com/user-attachments/assets/14789d22-dbcd-4e54-aa3d-4459c0a782f1" />
 
